@@ -1,0 +1,25 @@
+{
+  "name": "nestjs-primer",
+  "version": "0.0.1",
+  "description": "Primer project, containing battery included, handpicked and maintained versions and libraries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sprinting-Software/nestjs-primer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sprinting-Software/nestjs-primer/issues"
+  },
+  "homepage": "https://github.com/Sprinting-Software/nestjs-primer#readme",
+  "dependencies": {
+    "nestjs": "^0.0.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^9.1.1"
+  }
+}
