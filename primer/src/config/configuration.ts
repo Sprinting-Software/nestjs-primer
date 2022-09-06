@@ -13,4 +13,4 @@ const convictSchema = convict({
 });
 
 convictSchema.validate({allowed: 'strict'});
-export default () => convictSchema.getProperties();
+export default convictSchema.getProperties();

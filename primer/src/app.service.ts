@@ -6,7 +6,7 @@ export class AppService {
   constructor(private appConfigService: AppConfigService) {}
 
   getHello(): string {
-    console.log(this.appConfigService.getConfig<number>('port'));
+    console.log(this.appConfigService.getConfig('port'));
     return 'Hello World!';
   }
 }

@@ -1,15 +1,9 @@
 import {Injectable} from '@nestjs/common';
-import {ConfigService} from '@nestjs/config';
+import configuration from './configuration';
 
 @Injectable()
 export class AppConfigService {
-  constructor(private configService: ConfigService) {}
-
-  get isAuthEnabled(): boolean {
-    return this.configService.get('AUTH_ENABLED') === 'true';
-  }
-
-  getConfig<T>(key: string) {
-    return this.configService.get<T>(key);
+  getConfig(key: keyof typeof configuration) {
+    return configuration[key];
   }
 }
