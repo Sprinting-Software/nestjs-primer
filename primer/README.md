@@ -1,6 +1,14 @@
 ## Description
 Put your custom description here
 
+## Configuration
+
+
+## Logs
+
+
+## Errors
+
 ## Installation
 
 ```bash
