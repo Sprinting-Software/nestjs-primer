@@ -1,6 +1,6 @@
 import {ArgumentsHost, Catch, ExceptionFilter, Injectable} from '@nestjs/common';
 import {AppConfigService} from '..//config/appconfig.service';
-import {logger} from '../logger/mylogger';
+import logger from '../logger/logger.service';
 import {BaseError} from './error.base';
 import formatError from './formatError';
 
