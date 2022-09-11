@@ -7,7 +7,7 @@ export class AppService {
   constructor(private appConfigService: AppConfigService, private logger: LoggerService) {}
 
   getHello(): string {
-    this.logger.info(__filename, `${this.appConfigService.getConfig('port')}`);
+    this.logger.info(__filename, `${this.appConfigService.getConfig().port}`);
     return 'Hello World!';
   }
 }
