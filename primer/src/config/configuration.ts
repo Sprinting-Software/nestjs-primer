@@ -11,6 +11,11 @@ const convictSchema = convict({
     format: 'port',
     default: 3000,
   },
+  dbPassword: {
+    doc: 'Postgres password',
+    env: 'DB_PASSWORD',
+    default: '',
+  },
 });
 
 convictSchema.validate({allowed: 'strict'});
