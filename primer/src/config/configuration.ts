@@ -1,8 +1,9 @@
 import * as convict from 'convict';
 import * as dotenv from 'dotenv';
+import path from 'path';
 
-const path = process.env.NODE_ENV ? `.${process.env.NODE_ENV}` : '.env';
-dotenv.config({path});
+const envVariablesPath = process.env.NODE_ENV ? path.join(__dirname, `../../${process.env.NODE_ENV}.env`) : '.env';
+dotenv.config({path: envVariablesPath});
 
 const convictSchema = convict({
   port: {
