@@ -19,7 +19,16 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "typeorm": "ts-node ./node_modules/typeorm/cli",
+    "typeorm:run-migrations": "npm run typeorm migration:run -- -d ./src/database/typeOrm.config.ts",
+    "typeorm:generate-migration": "npm run typeorm -- -d ./src/database/typeOrm.config.ts migration:generate ./src/database/migrations/$npm_config_name",
+    "typeorm:create-migration": "npm run typeorm -- migration:create ./src/database/migrations/$npm_config_name",
+    "typeorm:revert-migration": "npm run typeorm -- -d ./src/database/typeOrm.config.ts migration:revert",
+    "typeorm:run-migrations:local": "NODE_ENV=a-env npm run typeorm migration:run -- -d ./src/database/typeOrm.config.ts",
+    "typeorm:generate-migration:local": "NODE_ENV=a-env npm run typeorm -- -d ./src/database/typeOrm.config.ts migration:generate ./src/database/migrations/$npm_config_name",
+    "typeorm:create-migration:local": "NODE_ENV=a-env npm run typeorm -- migration:create ./src/database/migrations/$npm_config_name",
+    "typeorm:revert-migration:local": "NODE_ENV=a-env npm run typeorm -- -d ./src/database/typeOrm.config.ts migration:revert"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
